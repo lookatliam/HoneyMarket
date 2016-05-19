@@ -15,7 +15,7 @@
 }
 
 body {
-	background: #dfdfda;
+	background: url('../img/bodybg.jpg') top center repeat-x !important;
 }
 
 .container {
@@ -27,8 +27,8 @@ body {
 	width: 100%;
 	min-width: 1263px;
 	min-height: 40px;
-	background: #fff;
-	padding: 14px 0;
+	background: url('../img/topbg-opacity.png') top center;
+	padding: 6px 0 10px;
 	border-bottom: 1px solid #a3a3a3;
 
 	.logo {
@@ -45,7 +45,7 @@ body {
 		.logo-title {
 			font-size: 25px;
 			font-weight: bold;
-			margin-top: 10px;
+			margin-top: 7px;
 			float: right;
 		}
 
@@ -56,6 +56,7 @@ body {
 	}
 
 	.top-navigation {
+		background: url('../img/top-navigationbg.png') center center no-repeat;
 		margin-left: 200px;
 		float: left;
 
@@ -64,16 +65,18 @@ body {
 
 			li {
 				font-family: Arial;
-				padding: 10px 15px;
+				padding: 14px 28px;
 				float: left;
 
 				a {
-					color: #b0b0b0;
+					color: #333;
 					font-size: 16px;
-					padding: 0 4px 24px;
+					padding: 0 4px 18px;
 					border-bottom: 2px solid transparent;
 					text-decoration: none;
 					outline: none;
+					position: relative;
+					top: -2px;
 
 					&.active {
 						border-bottom: 2px solid #cc3333;
@@ -125,7 +128,7 @@ body {
 		color: #333;
 		font-family: Arial;
 		font-size: 12px;
-		background: url("../img/my-buy-bg.png") left center no-repeat #f8e778;
+		background: url("../img/my-buy-bg.png") left center no-repeat #f2c36d;
 		margin-top: 2px;
 		margin-right: 14px;
 		padding: 8px 15px 8px 45px;
@@ -1251,8 +1254,14 @@ body {
 	}
 
 	.filters {
-		background: #fff;
-		padding: 20px 40px 30px;
+		width: 900px;
+		background: url('../img/topbg2-opacity.png');
+		margin: 20px 0 0;
+		padding: 10px 20px 20px 10px;
+
+		&.activeMargin {
+			margin: 20px 0 20px;
+		}
 
 		.add-med {
 			color: #3d3d3d;
@@ -1296,7 +1305,7 @@ body {
 			}
 
 			.add-bee-addition {
-				color: #999;
+				color: #000;
 				font-family: Arial;
 				font-size: 11px;
 				position: absolute;
@@ -1340,7 +1349,7 @@ body {
 				width: 100px;
 				height: 25px;
 				-webkit-appearance: none;
-				background: url('../img/button-select-bg1.png') right center no-repeat;
+				background: url('../img/button-select-bg1.png') right center no-repeat #fff;
 				line-height: 1em;
 				/* for FF */
 				-moz-appearance: none;
@@ -1356,7 +1365,7 @@ body {
 			}
 
 			&.active {
-				background: url('../img/button-select-bg2.png') right center no-repeat;
+				background: url('../img/button-select-bg2.png') right center no-repeat #fff;
 			}
 		}
 
@@ -1396,39 +1405,6 @@ body {
 			}
 		}
 
-		.add-region-container {
-			float: left;
-			position: relative;
-
-			.add-region {
-				color: #3d3d3d;
-				font-family: Arial;
-				font-size: 13px;
-				background: url("../img/button-plus-bg.png") left center no-repeat #fff;
-				padding: 4px 10px 4px 18px;
-				margin-right: 20px;
-				float: left;
-				border: 1px solid #999;
-				border-radius: 2px;
-				outline: none;
-
-				&.active {
-					color: #3e3e3e;
-					background: #fff79d;
-					border: 1px solid #e0b401;
-				}
-			}
-
-			.add-region-addition {
-				color: #999;
-				font-family: Arial;
-				font-size: 11px;
-				position: absolute;
-				top: 24px;
-				left: 0;
-			}
-		}
-
 		.delivery-switch {
 			color: #3d3d3d;
 			font-family: Arial;
@@ -1443,7 +1419,27 @@ body {
 
 			&.active {
 				color: #3e3e3e;
+				background: #f6db4d;
+				border: 1px solid #e0b401;
+			}
+		}
+
+		.toggleSwitches {
+			color: #3d3d3d;
+			font-family: Arial;
+			font-size: 13px;
+			background: url('../img/button-select-bg1.png') right center no-repeat #fff;
+			padding: 4px 10px;
+			margin-right: 10px;
+			float: left;
+			border: 1px solid #999;
+			border-radius: 2px;
+			outline: none;
+
+			&.active {
+				color: #3e3e3e;
 				background: #fff79d;
+				background: url('../img/button-select-bg2.png') right center no-repeat #f6db4d;
 				border: 1px solid #e0b401;
 			}
 		}
@@ -1472,7 +1468,7 @@ body {
 			}
 
 			.reset-all-filters {
-				color: #999;
+				color: #000;
 				font-family: Arial;
 				font-size: 11px;
 				background: transparent;
@@ -1495,7 +1491,11 @@ body {
 	}
 
 	.switches {
+		width: 900px;
+		background: url('../img/topbg2-opacity.png');
+		margin: 0 0 20px;
 		padding: 10px 20px 10px 10px;
+		display: none;
 
 		.one-or-company {
 			float: left;
@@ -1530,7 +1530,7 @@ body {
 		}
 
 		.preorder-or-instock {
-			margin-left: 160px;
+			margin-left: 30px;
 			float: left;
 
 			.preorder {
@@ -1569,6 +1569,40 @@ body {
 			clear: both;
 			visibility: hidden;
 		}
+
+		.add-region-container {
+			margin-left: 30px;
+			float: left;
+			position: relative;
+
+			.add-region {
+				color: #3d3d3d;
+				font-family: Arial;
+				font-size: 13px;
+				background: url("../img/button-plus-bg.png") left center no-repeat #fff;
+				padding: 4px 10px 4px 18px;
+				margin-right: 20px;
+				float: left;
+				border: 1px solid #999;
+				border-radius: 2px;
+				outline: none;
+
+				&.active {
+					color: #3e3e3e;
+					background: #fff79d;
+					border: 1px solid #e0b401;
+				}
+			}
+
+			.add-region-addition {
+				color: #999;
+				font-family: Arial;
+				font-size: 11px;
+				position: absolute;
+				top: 24px;
+				left: 0;
+			}
+		}
 	}
 
 	.windows-container {
@@ -1592,7 +1626,7 @@ body {
 			width: 33%;
 			min-width: 470px;
 			max-width: 584px;
-			background: #fff;
+			background: #f6f6f6;
 			float: left;
 
 			.top-head {
@@ -1619,10 +1653,11 @@ body {
 					}
 
 					.filter-categories {
-						width: 80px;
-						color: #1778e4;
+						width: 85px;
+						color: #838383;
 						font-family: Arial;
-						font-size: 10px;
+						font-size: 12px;
+						background: #f6f6f6;
 						margin-top: 3px;
 						float: left;
 						border: 0;
@@ -1643,7 +1678,7 @@ body {
 				padding: 10px 0;
 
 				&.active {
-					background: #fef9c2;
+					background: #fff;
 				}
 
 				.product-img {
@@ -1676,7 +1711,7 @@ body {
 
 					.product-head {
 						.product-name {
-							color: #006699;
+							color: #a36014;
 							font-family: Arial;
 							font-size: 15px;
 							float: left;

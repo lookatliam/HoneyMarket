@@ -333,6 +333,12 @@ $(document).ready(function(){
 		$(this).toggleClass("active");
 	});
 
+	$(".toggleSwitches").click(function() {
+		$(this).toggleClass("active");
+		$(".switches").toggle();
+		$(".filters").toggleClass("activeMargin");
+	});
+
 	$(".inblock-onsale .price-product").hover(function() {
 		$(this).toggleClass("active");
 		$(".buyin", this).toggle();
